@@ -1,3 +1,4 @@
+/* ----------------- Base ----------------- */
 html {
     scroll-behavior: smooth;
 }
@@ -9,7 +10,7 @@ body {
     color: #e2e8f0;
 }
 
-/* NAVBAR */
+/* ----------------- NAVBAR ----------------- */
 nav {
     display: flex;
     justify-content: space-between;
@@ -38,13 +39,14 @@ nav {
     text-decoration: none;
     color: #e2e8f0;
     font-weight: 500;
+    transition: 0.3s ease;
 }
 
 .nav-links a:hover {
     color: #38bdf8;
 }
 
-/* HERO */
+/* ----------------- HERO ----------------- */
 .hero {
     text-align: center;
     padding: 120px 20px;
@@ -63,7 +65,7 @@ nav {
     color: #cbd5e1;
 }
 
-/* PROFILE PICTURE */
+/* ----------------- PROFILE PICTURE ----------------- */
 .profile-pic {
     width: 140px;
     height: 140px;
@@ -73,7 +75,7 @@ nav {
     object-fit: cover;
 }
 
-/* BUTTONS */
+/* ----------------- BUTTONS ----------------- */
 .btn {
     display: inline-block;
     padding: 12px 25px;
@@ -83,6 +85,7 @@ nav {
     border-radius: 30px;
     font-weight: bold;
     transition: 0.3s ease;
+    margin-top: 10px;
 }
 
 .btn:hover {
@@ -94,7 +97,7 @@ nav {
     font-size: 14px;
 }
 
-/* SECTIONS */
+/* ----------------- SECTIONS ----------------- */
 section {
     padding: 80px 8%;
     max-width: 1000px;
@@ -106,22 +109,7 @@ h2 {
     color: #ffffff;
 }
 
-/* PROJECT CARDS */
-.project-card,
-.card {
-    background: #1e293b;
-    padding: 25px;
-    margin-bottom: 25px;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-    transition: 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-8px);
-}
-
-/* SKILLS */
+/* ----------------- SKILLS ----------------- */
 .skills-container {
     display: flex;
     flex-wrap: wrap;
@@ -133,9 +121,36 @@ h2 {
     padding: 8px 15px;
     border-radius: 20px;
     font-weight: 500;
+    color: #ffffff;
 }
 
-/* FOOTER */
+/* ----------------- CARDS (Projects, Education, Certifications) ----------------- */
+.project-card,
+.card {
+    background: #1e293b;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    transition: 0.3s ease;
+}
+
+.project-card:hover,
+.card:hover {
+    transform: translateY(-8px);
+}
+
+/* ----------------- LINKS ----------------- */
+.link {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: #0ea5e9;
+}
+
+/* ----------------- FOOTER ----------------- */
 footer {
     text-align: center;
     padding: 25px;
@@ -143,7 +158,7 @@ footer {
     color: #94a3b8;
 }
 
-/* ANIMATION */
+/* ----------------- ANIMATION ----------------- */
 .fade-in {
     opacity: 0;
     transform: translateY(30px);
@@ -155,8 +170,9 @@ footer {
     transform: translateY(0);
 }
 
-/* MOBILE */
+/* ----------------- MOBILE RESPONSIVE ----------------- */
 @media (max-width: 768px) {
+
     .nav-links {
         display: none;
     }
@@ -167,5 +183,9 @@ footer {
 
     section {
         padding: 60px 5%;
+    }
+
+    .skills-container {
+        justify-content: center;
     }
 }
